@@ -13,11 +13,10 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 2rem;
-            color: #0f172a;
         }
 
         .container {
@@ -25,20 +24,21 @@
             margin: 0 auto;
         }
 
+        /* Header */
         .header-card {
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
             padding: 2rem;
             margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 2rem;
             flex-wrap: wrap;
+            gap: 1.5rem;
         }
 
         .header-left {
@@ -48,116 +48,90 @@
         }
 
         .icon-badge {
-            background: linear-gradient(135deg, #0066cc, #7c3aed);
-            color: white;
             width: 64px;
             height: 64px;
-            border-radius: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: white;
             font-size: 2rem;
         }
 
         h1 {
-            font-size: 1.75rem;
-            margin-bottom: 0.5rem;
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 0.25rem;
         }
 
         .subtitle {
             color: #64748b;
-            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
         }
 
         .badges {
             display: flex;
             gap: 0.5rem;
+            margin-top: 0.75rem;
             flex-wrap: wrap;
         }
 
         .badge {
-            padding: 0.25rem 0.75rem;
+            padding: 0.35rem 0.75rem;
             border-radius: 6px;
             font-size: 0.75rem;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .badge-primary {
-            background: rgba(0, 102, 204, 0.1);
-            color: #0066cc;
-            border: 1px solid rgba(0, 102, 204, 0.2);
+            background: #dbeafe;
+            color: #1e40af;
         }
 
         .badge-accent {
-            background: rgba(124, 58, 237, 0.1);
-            color: #7c3aed;
-            border: 1px solid rgba(124, 58, 237, 0.2);
+            background: #fce7f3;
+            color: #9f1239;
         }
 
         .badge-success {
-            background: rgba(16, 185, 129, 0.1);
-            color: #10b981;
-            border: 1px solid rgba(16, 185, 129, 0.2);
-        }
-
-        .badge-warning {
-            background: rgba(245, 158, 11, 0.1);
-            color: #f59e0b;
-            border: 1px solid rgba(245, 158, 11, 0.2);
-        }
-
-        .badge-error {
-            background: rgba(239, 68, 68, 0.1);
-            color: #ef4444;
-            border: 1px solid rgba(239, 68, 68, 0.2);
+            background: #d1fae5;
+            color: #065f46;
         }
 
         .badge-outline {
-            background: transparent;
+            background: #f1f5f9;
+            color: #475569;
             border: 1px solid #e2e8f0;
-            color: #64748b;
         }
 
-        .header-actions {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
+        .badge-error {
+            background: #fee2e2;
+            color: #991b1b;
         }
 
+        /* Buttons */
         .btn {
-            padding: 0.625rem 1.25rem;
-            border-radius: 8px;
+            padding: 0.75rem 1.5rem;
             border: none;
-            font-size: 0.875rem;
-            font-weight: 500;
+            border-radius: 8px;
+            font-weight: 600;
             cursor: pointer;
+            transition: all 0.3s;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            transition: all 0.2s;
-        }
-
-        .btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            font-size: 0.95rem;
         }
 
         .btn-primary {
-            background: #0066cc;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
         }
 
         .btn-primary:hover {
-            background: #0052a3;
-        }
-
-        .btn-secondary {
-            background: #f1f5f9;
-            color: #0f172a;
-        }
-
-        .btn-secondary:hover {
-            background: #e2e8f0;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
         }
 
         .btn-success {
@@ -165,30 +139,42 @@
             color: white;
         }
 
+        .btn-success:hover {
+            background: #059669;
+        }
+
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #475569;
+        }
+
+        .btn-secondary:hover {
+            background: #cbd5e1;
+        }
+
         .btn-professional {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: #0066cc;
             color: white;
         }
 
-        .btn-ghost {
-            background: transparent;
-            border: 1px solid #e2e8f0;
-            color: #0f172a;
+        .btn-professional:hover {
+            background: #0052a3;
         }
 
         .btn-sm {
             padding: 0.5rem 1rem;
-            font-size: 0.8125rem;
+            font-size: 0.875rem;
         }
 
         .btn-block {
             width: 100%;
-            margin-bottom: 0.5rem;
+            justify-content: center;
         }
 
+        /* Layout */
         .main-layout {
             display: grid;
-            grid-template-columns: 1fr 320px;
+            grid-template-columns: 1fr 350px;
             gap: 2rem;
         }
 
@@ -198,41 +184,62 @@
             }
         }
 
-        .tabs {
+        /* Card */
+        .card {
             background: white;
             border-radius: 12px;
-            padding: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 1.5rem;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f1f5f9;
+        }
+
+        .card-header h2, .card-header h3 {
+            color: #1e293b;
+            font-size: 1.25rem;
+        }
+
+        /* Tabs */
+        .tabs {
             display: flex;
             gap: 0.5rem;
             margin-bottom: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            flex-wrap: wrap;
+            background: white;
+            padding: 0.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
 
         .tab-btn {
             flex: 1;
-            min-width: 120px;
-            padding: 0.75rem 1rem;
-            background: transparent;
+            padding: 0.875rem 1.5rem;
             border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 0.875rem;
-            font-weight: 500;
+            background: transparent;
             color: #64748b;
+            cursor: pointer;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            transition: all 0.2s;
         }
 
         .tab-btn:hover {
-            background: #f1f5f9;
+            background: #f8fafc;
         }
 
         .tab-btn.active {
-            background: #0066cc;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
         }
 
@@ -244,52 +251,30 @@
             display: block;
         }
 
-        .card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1.5rem;
-        }
-
-        .card-header {
-            padding: 1.5rem;
-            border-bottom: 1px solid #e2e8f0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .card-header h2,
-        .card-header h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
-
-        .card-body {
-            padding: 1.5rem;
-        }
-
+        /* Employee Card */
         .employee-card {
-            background: rgba(241, 245, 249, 0.5);
-            border-radius: 8px;
-            padding: 1.25rem;
-            margin-bottom: 1rem;
+            background: #f8fafc;
             border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+        }
+
+        .employee-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: #cbd5e1;
         }
 
         .employee-header {
             display: flex;
             justify-content: space-between;
-            align-items: start;
+            align-items: flex-start;
             margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 1rem;
         }
 
         .employee-info h3 {
-            font-size: 1rem;
+            color: #1e293b;
             margin-bottom: 0.5rem;
         }
 
@@ -301,281 +286,149 @@
         }
 
         .employee-id {
-            font-size: 0.75rem;
             color: #64748b;
-        }
-
-        .employee-stats {
-            text-align: right;
             font-size: 0.875rem;
         }
 
-        .employee-stats .hours {
-            color: #64748b;
-            margin-bottom: 0.25rem;
-        }
-
-        .utilization {
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
-
-        .text-success {
-            color: #10b981;
-        }
-
-        .text-warning {
-            color: #f59e0b;
-        }
-
-        .text-error {
-            color: #ef4444;
-        }
-
-        .text-primary {
-            color: #0066cc;
+        .employee-stats {
+            display: flex;
+            gap: 0.5rem;
         }
 
         .employee-details {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
-            margin-bottom: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
         }
 
         .detail-section {
-            font-size: 0.875rem;
+            display: grid;
+            gap: 0.5rem;
         }
 
         .detail-label {
-            color: #64748b;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #475569;
+            font-size: 0.875rem;
         }
 
         .detail-content {
             display: flex;
-            flex-wrap: wrap;
-            gap: 0.25rem;
-        }
-
-        .availability-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
             gap: 0.5rem;
-            font-size: 0.75rem;
+            flex-wrap: wrap;
         }
 
-        .day-column {
-            text-align: center;
-        }
-
-        .day-name {
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-
-        .day-status {
-            padding: 0.25rem;
-            border-radius: 4px;
-            margin-bottom: 0.25rem;
-            border: 1px solid;
-        }
-
-        .status-available {
-            background: rgba(16, 185, 129, 0.1);
-            color: #10b981;
-            border-color: rgba(16, 185, 129, 0.2);
-        }
-
-        .status-unavailable {
-            background: rgba(239, 68, 68, 0.1);
-            color: #ef4444;
-            border-color: rgba(239, 68, 68, 0.2);
-        }
-
-        .shift-tag {
-            background: rgba(0, 102, 204, 0.1);
-            color: #0066cc;
-            padding: 0.125rem 0.25rem;
-            border-radius: 4px;
-            font-size: 0.65rem;
-            margin-bottom: 0.25rem;
-            border: 1px solid rgba(0, 102, 204, 0.2);
-        }
-
-        .location-tag {
-            background: #f1f5f9;
-            color: #64748b;
-            padding: 0.125rem 0.25rem;
-            border-radius: 4px;
-            font-size: 0.65rem;
-        }
-
-        .shift-card {
-            background: rgba(241, 245, 249, 0.5);
-            border-radius: 8px;
-            padding: 1.25rem;
-            margin-bottom: 1rem;
-            border: 1px solid #e2e8f0;
-        }
-
+        /* Shift Card */
         .shift-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 1rem;
-        }
-
-        .shift-info h3 {
-            font-size: 1rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .shift-details {
-            font-size: 0.875rem;
-            color: #64748b;
-            line-height: 1.8;
-        }
-
-        .schedule-grid {
             margin-bottom: 1.5rem;
         }
 
-        .day-schedule {
-            background: rgba(241, 245, 249, 0.3);
-            border-radius: 8px;
-            padding: 1rem;
+        .shift-card {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border: 2px solid #e0e7ff;
+            border-radius: 12px;
+            padding: 1.25rem;
+            transition: all 0.3s;
+        }
+
+        .shift-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .shift-info h3 {
+            color: #1e293b;
             margin-bottom: 1rem;
-            border: 1px solid #e2e8f0;
+        }
+
+        .shift-details {
+            display: grid;
+            gap: 0.5rem;
+            color: #475569;
+            font-size: 0.9rem;
+        }
+
+        .shift-details i {
+            color: #667eea;
+            width: 20px;
+        }
+
+        /* Schedule View */
+        .day-schedule {
+            margin-bottom: 2rem;
         }
 
         .day-title {
-            font-size: 1.1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1.25rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
         .shifts-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 0.75rem;
+            gap: 1rem;
         }
 
         .shift-assignment {
             background: white;
-            padding: 0.75rem;
-            border-radius: 6px;
-            border: 1px solid #e2e8f0;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.25rem;
         }
 
         .shift-name {
+            font-size: 1.1rem;
             font-weight: 600;
-            font-size: 0.875rem;
+            color: #1e293b;
             margin-bottom: 0.5rem;
-            color: #0f172a;
         }
 
         .shift-time {
-            font-size: 0.75rem;
             color: #64748b;
-            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
         }
 
         .assigned-employees {
-            margin-top: 0.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
         }
 
         .employee-name-badge {
-            display: block;
-            text-align: center;
-            background: rgba(0, 102, 204, 0.1);
-            color: #0066cc;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            margin-bottom: 0.25rem;
-            border: 1px solid rgba(0, 102, 204, 0.2);
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .staff-count {
+            color: #10b981;
+            font-weight: 600;
         }
 
         .no-staff {
             color: #ef4444;
-            font-size: 0.75rem;
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
+            font-weight: 600;
         }
 
-        .staff-count {
-            font-size: 0.75rem;
-            color: #64748b;
-            margin-top: 0.5rem;
-        }
-
-        .empty-state {
-            text-align: center;
-            padding: 3rem;
-            color: #94a3b8;
-        }
-
-        .empty-state i {
-            margin-bottom: 1rem;
-        }
-
-        .settings-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            font-size: 0.875rem;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 0.625rem;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            font-size: 0.875rem;
-            background: white;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: #0066cc;
-            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
-        }
-
-        .checkbox-label {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            cursor: pointer;
-        }
-
-        .checkbox-label input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
-        }
-
+        /* Stats */
         .stat-row {
             display: flex;
             justify-content: space-between;
             padding: 0.75rem 0;
             border-bottom: 1px solid #f1f5f9;
-            font-size: 0.875rem;
         }
 
         .stat-row:last-child {
@@ -584,74 +437,112 @@
 
         .stat-row span:first-child {
             color: #64748b;
+            font-weight: 500;
         }
 
         .stat-row span:last-child {
+            color: #1e293b;
             font-weight: 600;
         }
 
+        /* Info Box */
         .info-box {
             padding: 1rem;
             border-radius: 8px;
             margin-bottom: 1rem;
-            border-left: 4px solid;
         }
 
-        .info-box h4 {
-            font-size: 0.875rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .info-box p {
-            font-size: 0.75rem;
-            color: #64748b;
-            line-height: 1.5;
+        .info-box:last-child {
+            margin-bottom: 0;
         }
 
         .info-primary {
-            border-color: #0066cc;
-            background: rgba(0, 102, 204, 0.05);
-        }
-
-        .info-primary h4 {
-            color: #0066cc;
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
         }
 
         .info-accent {
-            border-color: #7c3aed;
-            background: rgba(124, 58, 237, 0.05);
+            background: #fdf4ff;
+            border-left: 4px solid #a855f7;
         }
 
-        .info-accent h4 {
-            color: #7c3aed;
+        .info-box h4 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
         }
 
+        .info-box p {
+            color: #475569;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        /* Violations */
         .violations-box {
             margin-top: 1rem;
-            padding: 0.75rem;
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.2);
-            border-radius: 6px;
+            padding: 1rem;
+            background: #fef2f2;
+            border-radius: 8px;
+            border-left: 4px solid #ef4444;
         }
 
         .violations-title {
-            font-size: 0.875rem;
             font-weight: 600;
-            color: #ef4444;
+            color: #991b1b;
             margin-bottom: 0.5rem;
         }
 
         .violations-list {
-            max-height: 150px;
-            overflow-y: auto;
+            color: #7f1d1d;
+            font-size: 0.875rem;
         }
 
         .violation-item {
-            font-size: 0.75rem;
-            color: rgba(239, 68, 68, 0.8);
             padding: 0.25rem 0;
         }
 
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #94a3b8;
+        }
+
+        .empty-state i {
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        /* Form */
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #475569;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        /* Loading Overlay */
         .loading-overlay {
             position: fixed;
             top: 0;
@@ -668,41 +559,26 @@
         .loading-spinner {
             background: white;
             padding: 2rem 3rem;
-            border-radius: 12px;
+            border-radius: 16px;
             text-align: center;
         }
 
         .loading-spinner i {
-            color: #0066cc;
+            color: #667eea;
             margin-bottom: 1rem;
         }
 
         .loading-spinner p {
-            color: #64748b;
-            font-size: 0.875rem;
+            color: #475569;
+            font-weight: 600;
         }
 
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem;
-            }
+        .text-success {
+            color: #10b981;
+        }
 
-            .header-content {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .header-actions {
-                width: 100%;
-            }
-
-            .btn {
-                flex: 1;
-            }
-
-            .availability-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
+        .text-primary {
+            color: #667eea;
         }
     </style>
 </head>
@@ -717,20 +593,17 @@
                     </div>
                     <div>
                         <h1>AI Employee Shift Scheduler</h1>
-                        <p class="subtitle">Enterprise scheduling for consulting firms like Accenture, Deloitte & PwC</p>
+                        <p class="subtitle">Enterprise scheduling with Genetic Algorithm optimization</p>
                         <div class="badges">
-                            <span class="badge badge-primary">Multi-location Support</span>
-                            <span class="badge badge-accent">Project-based Assignments</span>
-                            <span class="badge badge-success">Utilization Optimization</span>
+                            <span class="badge badge-primary">Genetic Algorithm</span>
+                            <span class="badge badge-accent">Smart Constraints</span>
+                            <span class="badge badge-success">Days Off Support</span>
                         </div>
                     </div>
                 </div>
                 <div class="header-actions">
-                    <button class="btn btn-primary" onclick="generateSchedule('genetic')">
+                    <button class="btn btn-primary" onclick="generateSchedule()">
                         <i class="fas fa-brain"></i> Generate Schedule
-                    </button>
-                    <button class="btn btn-secondary" onclick="generateSchedule('random')">
-                        <i class="fas fa-cog"></i> Quick Schedule
                     </button>
                 </div>
             </div>
@@ -750,9 +623,6 @@
                     <button class="tab-btn" data-tab="schedule">
                         <i class="fas fa-calendar"></i> Schedule
                     </button>
-                    <button class="tab-btn" data-tab="settings">
-                        <i class="fas fa-cog"></i> Settings
-                    </button>
                 </div>
 
                 <!-- Employees Tab -->
@@ -760,12 +630,12 @@
                     <div class="card">
                         <div class="card-header">
                             <h2>Employee Management</h2>
-                            <button class="btn btn-success btn-sm" onclick="addEmployee()">
+                            <button class="btn btn-success btn-sm" onclick="showAddEmployeeModal()">
                                 <i class="fas fa-plus"></i> Add Employee
                             </button>
                         </div>
                         <div class="card-body" id="employeesList">
-                            <!-- Employees will be loaded here -->
+                            <!-- Employees loaded by JavaScript -->
                         </div>
                     </div>
                 </div>
@@ -775,12 +645,12 @@
                     <div class="card">
                         <div class="card-header">
                             <h2>Shift Management</h2>
-                            <button class="btn btn-success btn-sm" onclick="addShift()">
+                            <button class="btn btn-success btn-sm" onclick="showAddShiftModal()">
                                 <i class="fas fa-plus"></i> Add Shift
                             </button>
                         </div>
                         <div class="card-body" id="shiftsList">
-                            <!-- Shifts will be loaded here -->
+                            <!-- Shifts loaded by JavaScript -->
                         </div>
                     </div>
                 </div>
@@ -794,40 +664,7 @@
                         <div class="card-body" id="scheduleView">
                             <div class="empty-state">
                                 <i class="fas fa-calendar fa-3x"></i>
-                                <p>No schedule generated yet. Click "Generate Schedule" to create a schedule.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Settings Tab -->
-                <div class="tab-content" id="settings">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2>Scheduling Constraints</h2>
-                        </div>
-                        <div class="card-body">
-                            <div class="settings-grid">
-                                <div class="form-group">
-                                    <label>Max Consecutive Days</label>
-                                    <input type="number" id="maxConsecutiveDays" value="5" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>Min Rest Hours</label>
-                                    <input type="number" id="minRestHours" value="8" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="fairDistribution" checked>
-                                    <span>Fair Distribution of Hours</span>
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="skillMatching" checked>
-                                    <span>Strict Skill Matching</span>
-                                </label>
+                                <p>No schedule generated yet. Click "Generate Schedule" to create one using the Genetic Algorithm.</p>
                             </div>
                         </div>
                     </div>
@@ -844,7 +681,7 @@
                     <div class="card-body">
                         <div class="stat-row">
                             <span>Algorithm:</span>
-                            <span id="resultAlgorithm">-</span>
+                            <span id="resultAlgorithm">GENETIC</span>
                         </div>
                         <div class="stat-row">
                             <span>Fitness:</span>
@@ -886,16 +723,16 @@
                 <!-- AI Info Card -->
                 <div class="card">
                     <div class="card-header">
-                        <h3><i class="fas fa-brain text-primary"></i> AI Algorithms</h3>
+                        <h3><i class="fas fa-brain text-primary"></i> Genetic Algorithm</h3>
                     </div>
                     <div class="card-body">
                         <div class="info-box info-primary">
-                            <h4>Genetic Algorithm</h4>
-                            <p>Evolutionary optimization with crossover, mutation, and selection.</p>
+                            <h4>How it Works</h4>
+                            <p>Uses evolutionary principles with selection, crossover, and mutation to find optimal schedules.</p>
                         </div>
                         <div class="info-box info-accent">
-                            <h4>Constraint Satisfaction</h4>
-                            <p>CSP solver ensuring availability, skills, and labor constraints.</p>
+                            <h4>Constraints</h4>
+                            <p>Respects days off, max hours, staffing requirements, and balances workload.</p>
                         </div>
                     </div>
                 </div>
@@ -906,14 +743,8 @@
                         <h3>Actions</h3>
                     </div>
                     <div class="card-body">
-                        <button class="btn btn-professional btn-block">
-                            <i class="fas fa-save"></i> Save Schedule
-                        </button>
-                        <button class="btn btn-professional btn-block">
+                        <button class="btn btn-professional btn-block" onclick="exportPDF()">
                             <i class="fas fa-download"></i> Export PDF
-                        </button>
-                        <button class="btn btn-ghost btn-block">
-                            <i class="fas fa-filter"></i> Compare Results
                         </button>
                     </div>
                 </div>
@@ -921,13 +752,603 @@
         </div>
     </div>
 
+    <!-- Loading Overlay -->
     <div id="loadingOverlay" class="loading-overlay" style="display: none;">
         <div class="loading-spinner">
             <i class="fas fa-spinner fa-spin fa-3x"></i>
-            <p>Generating optimal schedule...</p>
+            <p>Running Genetic Algorithm...</p>
         </div>
     </div>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        // Include the complete script.js content here
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("App loaded!");
+            loadEmployees();
+            loadShifts();
+            setupTabs();
+            updateStatistics();
+        });
+
+        function setupTabs() {
+            const tabs = document.querySelectorAll(".tab-btn");
+            const contents = document.querySelectorAll(".tab-content");
+
+            tabs.forEach((tab) => {
+                tab.addEventListener("click", () => {
+                    tabs.forEach((t) => t.classList.remove("active"));
+                    contents.forEach((c) => c.classList.remove("active"));
+                    tab.classList.add("active");
+                    document.getElementById(tab.dataset.tab).classList.add("active");
+                });
+            });
+        }
+
+        function loadEmployees() {
+            console.log("Loading employees...");
+            fetch("/get_employees")
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log("Employees loaded:", data);
+                    const list = document.getElementById("employeesList");
+                    list.innerHTML = "";
+
+                    if (data.length === 0) {
+                        list.innerHTML = `
+                            <div class="empty-state">
+                                <i class="fas fa-users fa-3x"></i>
+                                <p>No employees yet. Click "Add Employee" to get started.</p>
+                            </div>
+                        `;
+                        return;
+                    }
+
+                    data.forEach(emp => {
+                        const unavailableDays = emp.unavailable_days ? emp.unavailable_days.split(',').filter(d => d.trim()) : [];
+                        const skills = emp.skills ? emp.skills.split(',').filter(s => s.trim()) : [];
+                        
+                        const card = document.createElement("div");
+                        card.classList.add("employee-card");
+                        card.innerHTML = `
+                            <div class="employee-header">
+                                <div class="employee-info">
+                                    <h3>${emp.name}</h3>
+                                    <div class="employee-badges">
+                                        <span class="badge badge-outline">${emp.role}</span>
+                                        ${skills.slice(0, 3).map(skill => 
+                                            `<span class="badge badge-primary">${skill.trim()}</span>`
+                                        ).join('')}
+                                    </div>
+                                    <p class="employee-id">ID: ${emp.id} | Max Hours: ${emp.max_hours_per_week}h/week</p>
+                                </div>
+                                <div class="employee-stats">
+                                    <button class="btn btn-sm btn-secondary" onclick="editEmployee(${emp.id})" style="margin-right: 0.5rem;">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </button>
+                                    <button class="btn btn-sm btn-secondary" onclick="deleteEmployee(${emp.id}, '${emp.name.replace(/'/g, "\\'")}')">
+                                        <i class="fas fa-trash"></i> Delete
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="employee-details">
+                                <div class="detail-section">
+                                    <div class="detail-label">Skills</div>
+                                    <div class="detail-content">
+                                        ${skills.length > 0 ? 
+                                            skills.map(s => `<span class="badge badge-outline">${s.trim()}</span>`).join(' ') :
+                                            '<span style="color: #94a3b8;">No skills listed</span>'
+                                        }
+                                    </div>
+                                </div>
+                                <div class="detail-section">
+                                    <div class="detail-label">Days Off (Unavailable Days)</div>
+                                    <div class="detail-content">
+                                        ${unavailableDays.length > 0 ? 
+                                            unavailableDays.map(d => `<span class="badge badge-error">${d.trim()}</span>`).join(' ') :
+                                            '<span style="color: #10b981;">Available all days</span>'
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        list.appendChild(card);
+                    });
+                    
+                    updateStatistics();
+                })
+                .catch(err => {
+                    console.error("Error loading employees:", err);
+                    alert("Failed to load employees. Check console.");
+                });
+        }
+
+        function loadShifts() {
+            console.log("Loading shifts...");
+            fetch("/get_shifts")
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log("Shifts loaded:", data);
+                    const list = document.getElementById("shiftsList");
+                    list.innerHTML = "";
+
+                    if (data.length === 0) {
+                        list.innerHTML = `
+                            <div class="empty-state">
+                                <i class="fas fa-clock fa-3x"></i>
+                                <p>No shifts yet. Click "Add Shift" to create shifts.</p>
+                            </div>
+                        `;
+                        return;
+                    }
+
+                    const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+                    days.forEach(day => {
+                        const dayShifts = data.filter(s => s.day === day);
+                        if (dayShifts.length === 0) return;
+                        
+                        const daySection = document.createElement("div");
+                        daySection.innerHTML = `<h3 style="margin: 1.5rem 0 1rem 0; color: #0066cc;"><i class="fas fa-calendar-day"></i> ${day}</h3>`;
+                        list.appendChild(daySection);
+                        
+                        const shiftsGrid = document.createElement("div");
+                        shiftsGrid.classList.add("shift-grid");
+                        
+                        dayShifts.forEach(shift => {
+                            const card = document.createElement("div");
+                            card.classList.add("shift-card");
+                            card.innerHTML = `
+                                <div class="shift-info">
+                                    <h3>${shift.name}</h3>
+                                    <div class="shift-details">
+                                        <div><i class="fas fa-clock"></i> ${shift.start_time} - ${shift.end_time}</div>
+                                        <div><i class="fas fa-users"></i> Required Staff: ${shift.required_staff}</div>
+                                        ${shift.required_skills ? 
+                                            `<div><i class="fas fa-code"></i> Skills: ${shift.required_skills}</div>` : 
+                                            ''
+                                        }
+                                    </div>
+                                    <div style="margin-top: 1rem;">
+                                        <button class="btn btn-sm btn-secondary" onclick="deleteShift(${shift.id}, '${shift.name.replace(/'/g, "\\'")}')">
+                                            <i class="fas fa-trash"></i> Delete
+                                        </button>
+                                    </div>
+                                </div>
+                            `;
+                            shiftsGrid.appendChild(card);
+                        });
+                        
+                        list.appendChild(shiftsGrid);
+                    });
+                    
+                    updateStatistics();
+                })
+                .catch(err => {
+                    console.error("Error loading shifts:", err);
+                });
+        }
+
+        function showAddEmployeeModal() {
+            const modal = createEmployeeModal();
+            document.body.appendChild(modal);
+        }
+
+        function editEmployee(id) {
+            fetch("/get_employees")
+                .then(res => res.json())
+                .then(data => {
+                    const emp = data.find(e => e.id === id);
+                    if (emp) {
+                        const modal = createEmployeeModal(emp);
+                        document.body.appendChild(modal);
+                    }
+                });
+        }
+
+        function createEmployeeModal(employee = null) {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+                background: rgba(0,0,0,0.7); display: flex; align-items: center;
+                justify-content: center; z-index: 10000;
+            `;
+            
+            const isEdit = employee !== null;
+            
+            modal.innerHTML = `
+                <div style="background: white; border-radius: 12px; padding: 2rem; max-width: 600px; width: 90%; max-height: 90vh; overflow-y: auto;">
+                    <h2 style="margin-bottom: 1.5rem;">${isEdit ? 'Edit' : 'Add'} Employee</h2>
+                    
+                    <div class="form-group">
+                        <label>Name *</label>
+                        <input type="text" id="empName" class="form-control" value="${employee?.name || ''}" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Role *</label>
+                        <input type="text" id="empRole" class="form-control" value="${employee?.role || ''}" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Skills (comma-separated)</label>
+                        <input type="text" id="empSkills" class="form-control" value="${employee?.skills || ''}" placeholder="Python,Java,Leadership">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Max Hours Per Week</label>
+                        <input type="number" id="empMaxHours" class="form-control" value="${employee?.max_hours_per_week || 40}" min="1" max="80">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Days Off / Unavailable Days (comma-separated)</label>
+                        <input type="text" id="empUnavailable" class="form-control" value="${employee?.unavailable_days || ''}" placeholder="Saturday,Sunday">
+                        <small style="color: #64748b; font-size: 0.75rem;">Days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday</small>
+                    </div>
+                    
+                    <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem;">
+                        <button class="btn btn-primary" onclick="saveEmployee(${isEdit ? employee.id : 'null'})">
+                            <i class="fas fa-save"></i> Save
+                        </button>
+                        <button class="btn btn-secondary" onclick="this.closest('[style*=fixed]').remove()">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) modal.remove();
+            });
+            
+            return modal;
+        }
+
+        function saveEmployee(id) {
+            const name = document.getElementById('empName').value.trim();
+            const role = document.getElementById('empRole').value.trim();
+            const skills = document.getElementById('empSkills').value.trim();
+            const maxHours = document.getElementById('empMaxHours').value;
+            const unavailable = document.getElementById('empUnavailable').value.trim();
+            
+            if (!name || !role) {
+                alert('Name and Role are required');
+                return;
+            }
+            
+            showLoading(true);
+            
+            const url = id ? `/update_employee/${id}` : '/add_employee';
+            const method = id ? 'PUT' : 'POST';
+            
+            fetch(url, {
+                method: method,
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name, role, skills, 
+                    max_hours: parseInt(maxHours),
+                    unavailable_days: unavailable
+                }),
+            })
+            .then((res) => res.json())
+            .then(() => {
+                showLoading(false);
+                document.querySelector('[style*=fixed]').remove();
+                alert(`Employee ${id ? 'updated' : 'added'} successfully!`);
+                loadEmployees();
+            })
+            .catch(err => {
+                console.error("Error:", err);
+                showLoading(false);
+                alert(`Failed to ${id ? 'update' : 'add'} employee`);
+            });
+        }
+
+        function deleteEmployee(id, name) {
+            if (!confirm(`Delete ${name}?`)) return;
+
+            showLoading(true);
+
+            fetch(`/delete_employee/${id}`, { method: "DELETE" })
+                .then((res) => res.json())
+                .then(() => {
+                    showLoading(false);
+                    alert("Employee deleted!");
+                    loadEmployees();
+                })
+                .catch(err => {
+                    console.error("Error:", err);
+                    showLoading(false);
+                    alert("Failed to delete employee");
+                });
+        }
+
+        function showAddShiftModal() {
+            const modal = createShiftModal();
+            document.body.appendChild(modal);
+        }
+
+        function createShiftModal() {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+                background: rgba(0,0,0,0.7); display: flex; align-items: center;
+                justify-content: center; z-index: 10000;
+            `;
+            
+            modal.innerHTML = `
+                <div style="background: white; border-radius: 12px; padding: 2rem; max-width: 500px; width: 90%;">
+                    <h2 style="margin-bottom: 1.5rem;">Add Shift</h2>
+                    
+                    <div class="form-group">
+                        <label>Shift Name *</label>
+                        <input type="text" id="shiftName" class="form-control" placeholder="Morning Shift" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Day *</label>
+                        <select id="shiftDay" class="form-control" required>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Start Time *</label>
+                        <input type="time" id="shiftStart" class="form-control" value="09:00" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>End Time *</label>
+                        <input type="time" id="shiftEnd" class="form-control" value="17:00" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Required Staff *</label>
+                        <input type="number" id="shiftStaff" class="form-control" value="2" min="1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Required Skills (comma-separated)</label>
+                        <input type="text" id="shiftSkills" class="form-control" placeholder="Python,Java">
+                    </div>
+                    
+                    <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem;">
+                        <button class="btn btn-primary" onclick="saveShift()">
+                            <i class="fas fa-save"></i> Save
+                        </button>
+                        <button class="btn btn-secondary" onclick="this.closest('[style*=fixed]').remove()">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) modal.remove();
+            });
+            
+            return modal;
+        }
+
+        function saveShift() {
+            const name = document.getElementById('shiftName').value.trim();
+            const day = document.getElementById('shiftDay').value;
+            const startTime = document.getElementById('shiftStart').value;
+            const endTime = document.getElementById('shiftEnd').value;
+            const requiredStaff = document.getElementById('shiftStaff').value;
+            const requiredSkills = document.getElementById('shiftSkills').value.trim();
+            
+            if (!name || !day || !startTime || !endTime) {
+                alert('All required fields must be filled');
+                return;
+            }
+            
+            showLoading(true);
+            
+            fetch('/add_shift', {
+                method: 'POST',
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name, day, 
+                    start_time: startTime,
+                    end_time: endTime,
+                    required_staff: parseInt(requiredStaff),
+                    required_skills: requiredSkills
+                }),
+            })
+            .then((res) => res.json())
+            .then(() => {
+                showLoading(false);
+                document.querySelector('[style*=fixed]').remove();
+                alert('Shift added successfully!');
+                loadShifts();
+            })
+            .catch(err => {
+                console.error("Error:", err);
+                showLoading(false);
+                alert('Failed to add shift');
+            });
+        }
+
+        function deleteShift(id, name) {
+            if (!confirm(`Delete shift "${name}"?`)) return;
+
+            showLoading(true);
+
+            fetch(`/delete_shift/${id}`, { method: "DELETE" })
+                .then((res) => res.json())
+                .then(() => {
+                    showLoading(false);
+                    alert("Shift deleted!");
+                    loadShifts();
+                })
+                .catch(err => {
+                    console.error("Error:", err);
+                    showLoading(false);
+                    alert("Failed to delete shift");
+                });
+        }
+
+        function generateSchedule() {
+            console.log("Generating schedule with GENETIC algorithm");
+            showLoading(true);
+            
+            fetch('/generate_schedule/genetic')
+                .then(res => res.json())
+                .then(data => {
+                    console.log("Schedule generated:", data);
+                    showLoading(false);
+                    displayScheduleResults(data);
+                    displaySchedule(data.schedule_data);
+                    
+                    const scheduleTab = document.querySelector('[data-tab="schedule"]');
+                    if (scheduleTab) scheduleTab.click();
+                    
+                    alert(`Schedule generated successfully!\nFitness: ${data.fitness}\nViolations: ${data.violations}`);
+                })
+                .catch(err => {
+                    console.error("Error:", err);
+                    showLoading(false);
+                    alert("Failed to generate schedule. Make sure you have both employees and shifts added.");
+                });
+        }
+
+        function displayScheduleResults(data) {
+            const resultsCard = document.getElementById('resultsCard');
+            resultsCard.style.display = 'block';
+            
+            document.getElementById('resultAlgorithm').textContent = data.algorithm;
+            document.getElementById('resultFitness').textContent = data.fitness;
+            document.getElementById('resultTime').textContent = data.time;
+            document.getElementById('resultViolations').textContent = data.violations;
+            
+            const violationsList = document.getElementById('violationsList');
+            if (data.violations > 0 && data.violation_details) {
+                let violationsHtml = `
+                    <div class="violations-box">
+                        <div class="violations-title">⚠️ ${data.violations} Violations</div>
+                        <div class="violations-list">
+                `;
+                data.violation_details.forEach(v => {
+                    violationsHtml += `<div class="violation-item">• ${v}</div>`;
+                });
+                violationsHtml += `</div></div>`;
+                violationsList.innerHTML = violationsHtml;
+            } else {
+                violationsList.innerHTML = `
+                    <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(16, 185, 129, 0.1); border-radius: 6px; color: #10b981; font-size: 0.875rem;">
+                        ✓ All constraints satisfied
+                    </div>
+                `;
+            }
+        }
+
+        function displaySchedule(scheduleData) {
+            const scheduleView = document.getElementById('scheduleView');
+            scheduleView.innerHTML = '';
+            
+            const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            
+            for (const day of days) {
+                const shifts = scheduleData[day];
+                if (!shifts || shifts.length === 0) continue;
+                
+                const dayDiv = document.createElement('div');
+                dayDiv.classList.add('day-schedule');
+                
+                let shiftsHtml = '<div class="shifts-container">';
+                shifts.forEach(shift => {
+                    const isUnderstaffed = shift.assigned.length < shift.required;
+                    const assignedHtml = shift.assigned.length > 0
+                        ? shift.assigned.map(emp => `<span class="employee-name-badge">${emp}</span>`).join('')
+                        : '<div class="no-staff"><i class="fas fa-exclamation-circle"></i> No staff</div>';
+                    
+                    shiftsHtml += `
+                        <div class="shift-assignment" style="${isUnderstaffed ? 'border-color: #ef4444; border-width: 2px;' : ''}">
+                            <div class="shift-name">${shift.shift}</div>
+                            <div class="shift-time"><i class="fas fa-clock"></i> ${shift.time}</div>
+                            <div class="assigned-employees">${assignedHtml}</div>
+                            <div class="staff-count" style="${isUnderstaffed ? 'color: #ef4444; font-weight: 600;' : ''}">
+                                ${shift.assigned.length}/${shift.required} staff
+                                ${isUnderstaffed ? ' ⚠️' : ' ✓'}
+                            </div>
+                        </div>
+                    `;
+                });
+                shiftsHtml += '</div>';
+                
+                dayDiv.innerHTML = `
+                    <div class="day-title">
+                        <i class="fas fa-calendar-day"></i> ${day}
+                    </div>
+                    ${shiftsHtml}
+                `;
+                
+                scheduleView.appendChild(dayDiv);
+            }
+        }
+
+        function updateStatistics() {
+            Promise.all([
+                fetch("/get_employees").then(res => res.json()),
+                fetch("/get_shifts").then(res => res.json())
+            ])
+            .then(([employees, shifts]) => {
+                document.getElementById('statsEmployees').textContent = employees.length;
+                document.getElementById('statsShifts').textContent = shifts.length;
+                
+                let totalHours = 0;
+                shifts.forEach(shift => {
+                    const start = shift.start_time.split(':');
+                    const end = shift.end_time.split(':');
+                    let hours = parseInt(end[0]) - parseInt(start[0]);
+                    if (hours < 0) hours += 24;
+                    totalHours += hours * shift.required_staff;
+                });
+                
+                document.getElementById('statsWeeklyHours').textContent = `${totalHours}h`;
+            })
+            .catch(err => console.error("Error updating stats:", err));
+        }
+
+        function showLoading(show) {
+            const overlay = document.getElementById('loadingOverlay');
+            if (overlay) {
+                overlay.style.display = show ? 'flex' : 'none';
+            }
+        }
+
+        function exportPDF() {
+            showLoading(true);
+            
+            fetch('/export_pdf')
+                .then(response => {
+                    if (!response.ok) throw new Error('Export failed');
+                    return response.blob();
+                })
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `schedule_${new Date().toISOString().split('T')[0]}.pdf`;
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+                    showLoading(false);
+                    alert('PDF exported successfully!');
+                })
+                .catch(err => {
+                    console.error('Error:', err);
+                    showLoading(false);
+                    alert('Failed to export PDF. Make sure you have generated a schedule first.');
+                });
+        }
+    </script>
 </body>
 </html>
